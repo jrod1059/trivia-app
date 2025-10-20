@@ -3,6 +3,8 @@ import { onMounted, ref } from 'vue';
 import useAPI from '@/composables/useAPI';
 import { useRoute } from 'vue-router';
 import BaseTitle from '@/components/BaseTitle.vue';
+import DifficultyChip from '@/components/DifficultyChip.vue';
+
 
 const api = useAPI()
 const question = ref(null)
@@ -66,6 +68,9 @@ class="bg-blue-700 flex items-center justify-center text-4xl rounded-lg text-whi
 </div>
 
 </div>
+<DifficultyChip :difficulty="question.difficulty"></DifficultyChip>
+
+
 </div>
 
 <div v-else class="">
